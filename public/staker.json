@@ -1,0 +1,1108 @@
+{
+  "address": "59jc5wTraRWdWGfS8JuF3C4HJhkN7jm8H9GAfCho9C77",
+  "metadata": {
+    "name": "staker",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "add_ngo",
+      "discriminator": [
+        195,
+        38,
+        112,
+        111,
+        122,
+        12,
+        212,
+        206
+      ],
+      "accounts": [
+        {
+          "name": "ngo_registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  110,
+                  103,
+                  111,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "treasury",
+          "type": "pubkey"
+        },
+        {
+          "name": "treasury_type",
+          "type": {
+            "defined": {
+              "name": "TreasuryType"
+            }
+          }
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "claim_lst",
+      "discriminator": [
+        16,
+        164,
+        179,
+        224,
+        42,
+        139,
+        77,
+        176
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "lst_mint"
+        },
+        {
+          "name": "user_lock",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  108,
+                  111,
+                  99,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "account",
+                "path": "lst_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_token_account",
+          "writable": true
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lst_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_charity_profile",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  99,
+                  104,
+                  97,
+                  114,
+                  105,
+                  116,
+                  121,
+                  95,
+                  112,
+                  114,
+                  111,
+                  102,
+                  105,
+                  108,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "selected_ngo_treasury",
+          "optional": true
+        },
+        {
+          "name": "global_ngo_treasury"
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "lst_price",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "get_user_charity_data",
+      "discriminator": [
+        179,
+        132,
+        5,
+        212,
+        31,
+        184,
+        51,
+        133
+      ],
+      "accounts": [
+        {
+          "name": "user_profile",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  99,
+                  104,
+                  97,
+                  114,
+                  105,
+                  116,
+                  121,
+                  95,
+                  112,
+                  114,
+                  111,
+                  102,
+                  105,
+                  108,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "ngo_treasury"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "admin",
+          "type": "pubkey"
+        },
+        {
+          "name": "upgrade_authority",
+          "type": "pubkey"
+        },
+        {
+          "name": "donation_percentage",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "initialize_ngo_registry",
+      "discriminator": [
+        156,
+        30,
+        227,
+        5,
+        43,
+        99,
+        219,
+        165
+      ],
+      "accounts": [
+        {
+          "name": "ngo_registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  110,
+                  103,
+                  111,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "admin",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "initialize_user_charity_profile",
+      "discriminator": [
+        200,
+        9,
+        206,
+        120,
+        10,
+        173,
+        57,
+        43
+      ],
+      "accounts": [
+        {
+          "name": "user_profile",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  99,
+                  104,
+                  97,
+                  114,
+                  105,
+                  116,
+                  121,
+                  95,
+                  112,
+                  114,
+                  111,
+                  102,
+                  105,
+                  108,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initiate_upgrade",
+      "discriminator": [
+        156,
+        81,
+        242,
+        118,
+        105,
+        137,
+        142,
+        10
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "upgrade_authority",
+          "signer": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "lock_lst",
+      "discriminator": [
+        168,
+        55,
+        227,
+        248,
+        123,
+        111,
+        107,
+        194
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "lst_mint"
+        },
+        {
+          "name": "user_token_account",
+          "writable": true
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "lst_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "user_lock",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  117,
+                  115,
+                  101,
+                  114,
+                  95,
+                  108,
+                  111,
+                  99,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "user"
+              },
+              {
+                "kind": "account",
+                "path": "lst_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "selected_ngo_treasury",
+          "optional": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "lock_months",
+          "type": "u8"
+        },
+        {
+          "name": "donation_percentage",
+          "type": "u8"
+        },
+        {
+          "name": "lst_price",
+          "type": "u64"
+        },
+        {
+          "name": "selected_ngo_treasury",
+          "type": {
+            "option": "pubkey"
+          }
+        }
+      ]
+    },
+    {
+      "name": "remove_ngo",
+      "discriminator": [
+        9,
+        194,
+        180,
+        108,
+        100,
+        47,
+        53,
+        42
+      ],
+      "accounts": [
+        {
+          "name": "ngo_registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  110,
+                  103,
+                  111,
+                  95,
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "treasury",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "update_config",
+      "discriminator": [
+        29,
+        158,
+        252,
+        191,
+        10,
+        83,
+        219,
+        99
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "admin",
+          "signer": true
+        }
+      ],
+      "args": [
+        {
+          "name": "new_admin",
+          "type": {
+            "option": "pubkey"
+          }
+        },
+        {
+          "name": "new_upgrade_authority",
+          "type": {
+            "option": "pubkey"
+          }
+        },
+        {
+          "name": "new_donation_percentage",
+          "type": {
+            "option": "u8"
+          }
+        },
+        {
+          "name": "new_ngo_treasury",
+          "type": {
+            "option": "pubkey"
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Config",
+      "discriminator": [
+        155,
+        12,
+        170,
+        224,
+        30,
+        250,
+        204,
+        130
+      ]
+    },
+    {
+      "name": "NgoRegistry",
+      "discriminator": [
+        230,
+        96,
+        126,
+        142,
+        217,
+        230,
+        37,
+        178
+      ]
+    },
+    {
+      "name": "UserCharityProfile",
+      "discriminator": [
+        109,
+        228,
+        164,
+        92,
+        23,
+        209,
+        17,
+        254
+      ]
+    },
+    {
+      "name": "UserLockAccount",
+      "discriminator": [
+        91,
+        74,
+        136,
+        233,
+        74,
+        201,
+        24,
+        94
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidAmount",
+      "msg": "Invalid amount"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidLockMonths",
+      "msg": "Invalid lock months (must be 1-12)"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidDonationPercentage",
+      "msg": "Invalid donation percentage (must be 1-100)"
+    },
+    {
+      "code": 6003,
+      "name": "NotOwner",
+      "msg": "Not the owner"
+    },
+    {
+      "code": 6004,
+      "name": "NotAdmin",
+      "msg": "Not admin"
+    },
+    {
+      "code": 6005,
+      "name": "AlreadyClaimed",
+      "msg": "Already claimed"
+    },
+    {
+      "code": 6006,
+      "name": "TooEarly",
+      "msg": "Too early to claim"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidMint",
+      "msg": "Invalid mint for token account"
+    },
+    {
+      "code": 6008,
+      "name": "InvalidOwner",
+      "msg": "Invalid owner for token account"
+    },
+    {
+      "code": 6009,
+      "name": "ConfigNotInitialized",
+      "msg": "Config not initialized"
+    },
+    {
+      "code": 6010,
+      "name": "InvalidPrice",
+      "msg": "Invalid price"
+    },
+    {
+      "code": 6011,
+      "name": "InvalidPriceFeed",
+      "msg": "Invalid price feed"
+    },
+    {
+      "code": 6012,
+      "name": "NotUpgradeAuthority",
+      "msg": "Not upgrade authority"
+    },
+    {
+      "code": 6013,
+      "name": "InvalidNgoTreasury",
+      "msg": "Invalid NGO treasury"
+    }
+  ],
+  "types": [
+    {
+      "name": "Config",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "upgrade_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "donation_percentage",
+            "type": "u8"
+          },
+          {
+            "name": "ngo_treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NgoInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury_type",
+            "type": {
+              "defined": {
+                "name": "TreasuryType"
+              }
+            }
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "is_active",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NgoRegistry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "ngos",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "NgoInfo"
+                }
+              }
+            }
+          },
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TreasuryType",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Wallet"
+          },
+          {
+            "name": "TokenAccount"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserCharityProfile",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_donations_usd",
+            "type": "u64"
+          },
+          {
+            "name": "total_donations_count",
+            "type": "u32"
+          },
+          {
+            "name": "last_donation_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "favorite_ngo",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserLockAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "lst_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "deposit_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "unlock_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "initial_principal_value_usd",
+            "type": "u64"
+          },
+          {
+            "name": "donation_percentage",
+            "type": "u8"
+          },
+          {
+            "name": "selected_ngo_treasury",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "is_claimed",
+            "type": "bool"
+          }
+        ]
+      }
+    }
+  ]
+}
