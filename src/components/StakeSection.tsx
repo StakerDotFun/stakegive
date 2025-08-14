@@ -181,6 +181,14 @@ export default function StakeSection({ lst }: StakeSectionProps) {
           balance: 2.5,
           isUserHolding: true,
         },
+        {
+          mint: "bSoLi5K3z3KZK7ytfqcJm7SozYCxHdYgdzU16g5QSh3",
+          name: "SolBlaze Staked SOL",
+          symbol: "BSOL",
+          apy: 7.2,
+          balance: 3.75,
+          isUserHolding: true,
+        },
       ];
 
       const allLSTs: OnchainLST[] = [
@@ -1154,3 +1162,4 @@ export default function StakeSection({ lst }: StakeSectionProps) {
     </div>
   );
 }
+
