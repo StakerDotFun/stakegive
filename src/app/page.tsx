@@ -601,6 +601,7 @@ export default function Home() {
       </section>
 
       {/* Developer Tools - Refined */}
+      {/*
       <section
         className="py-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black"
         id="developer-tools"
