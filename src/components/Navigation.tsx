@@ -63,12 +63,14 @@ export default function Navigation() {
               >
                 NGOs
               </Link>
+              {/*
               <Link
                 href="/#developer-tools"
                 className="nav-link text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 font-medium"
               >
                 Developer Tools
               </Link>
+              */}
               <Link
                 href="/#metrics"
                 className="nav-link text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 font-medium"
@@ -136,7 +138,7 @@ export default function Navigation() {
                     <span>NGOs</span>
                   </span>
                 </Link>
-
+{/*
                 <Link
                   href="/#developer-tools"
                   className="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
@@ -147,7 +149,7 @@ export default function Navigation() {
                     <span>Developer Tools</span>
                   </span>
                 </Link>
-
+*/}
                 <Link
                   href="/#metrics"
                   className="block px-4 py-3 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
