@@ -194,17 +194,24 @@ export default function StakeSection({ lst }: StakeSectionProps) {
       const allLSTs: OnchainLST[] = [
         ...userHoldings,
         {
-          mint: "bSo13r4TkiE4KumL71LsHTPpL2euBYLFx6h9HP3piy1",
-          name: "Blaze Staked SOL",
-          symbol: "BSOL",
-          apy: 9.2,
+          mint: "LnTRntk2kTfWEY6cVB8K9649pgJbt6dJLS1Ns1GZCWg",
+          name: "Lantern Staked SOL",
+          symbol: "LANTERNSOL",
+          apy: 7.49, // based on Solana Compass data
           isUserHolding: false,
         },
         {
-          mint: "st4k3Sol1234567890abcdefghijklmnopqrstuvwxyz",
-          name: "Stake Pool SOL",
-          symbol: "STSOL",
-          apy: 8.0,
+          mint: "aero2ePURjuEgLKTzcUmF6RypBncBGd7pMUYCoSsKCh7FbNDcrcxF",
+          name: "AeroSOL",
+          symbol: "aeroSOL",
+          apy: 6.54, // current APY per Solana Compass
+          isUserHolding: false,
+        },
+        {
+          mint: "FjoaGzpBtXb8XcphCxUPpQEEMNejUsCcXPMNQk5N3Vca",
+          name: "IslandDAO Staked SOL",
+          symbol: "islSOL",
+          apy: 7.42, // recent APY observed from Solana LST dashboard
           isUserHolding: false,
         },
       ];
@@ -1162,4 +1169,5 @@ export default function StakeSection({ lst }: StakeSectionProps) {
     </div>
   );
 }
+
 
