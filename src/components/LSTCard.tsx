@@ -136,7 +136,7 @@ export default function LSTCard({ lst, showStatus = false }: LSTCardProps) {
         <div className="flex-1 overflow-y-auto scrollable-content">
           <div className="px-6 pt-6 pb-4 space-y-4">
             {/* Header Section */}
-            <Link href={`/lst/${lst._id}`} className="block mb-3">
+            <Link href={`/lsts/${lst._id}`} className="block mb-3">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-300 mb-1 line-clamp-1 hover:text-blue-600 transition-colors">
                 {lst.name}
                 {lst.ticker && (
@@ -283,3 +283,4 @@ export default function LSTCard({ lst, showStatus = false }: LSTCardProps) {
     </>
   );
 }
+
