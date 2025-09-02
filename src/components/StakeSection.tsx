@@ -585,7 +585,7 @@ export default function StakeSection({ lst }: StakeSectionProps) {
                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
               />
             </svg>
-            Donate
+            Stake
           </span>
         </button>
       </div>
@@ -954,7 +954,6 @@ export default function StakeSection({ lst }: StakeSectionProps) {
             </div>
           </div>
 
-          {/* Donation Percentage */}
           {/* Donation Amount Display - Fetched from Database */}
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -987,7 +986,6 @@ export default function StakeSection({ lst }: StakeSectionProps) {
             </div>
           </div>
 
-          {/* NGO Selection */}
           {/* NGO Selection */}
           <div>
             <label
@@ -1023,7 +1021,6 @@ export default function StakeSection({ lst }: StakeSectionProps) {
             </select>
           </div>
 
-          {/* Selected NGO Details */}
           {/* Selected NGO Details */}
           {selectedNGOLST && donateAmount && (
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 space-y-2">
@@ -1159,7 +1156,7 @@ export default function StakeSection({ lst }: StakeSectionProps) {
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                   />
                 </svg>
-                Donate{" "}
+                Stake{" "}
                 {calculateDonationAmount().totalDonation.toFixed(2) || "0"} SOL
               </span>
             )}
