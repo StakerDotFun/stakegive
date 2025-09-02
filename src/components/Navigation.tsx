@@ -39,12 +39,12 @@ export default function Navigation() {
               <Link href="/" className="flex items-center space-x-2">
                 <Image
                   src="/logo-removed-bg.png"
-                  alt="StakerFun Logo"
+                  alt="StakeGive Logo"
                   width={32}
                   height={32}
                 />
                 <span className="logo-gradient text-2xl font-black">
-                  StakerFun
+                  StakeGive
                 </span>
               </Link>
             </div>

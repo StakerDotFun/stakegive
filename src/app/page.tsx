@@ -303,7 +303,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-black mb-6">
-              How <span className="gradient-text">StakerFun</span> Works
+              How <span className="gradient-text">StakeGive</span> Works
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Three simple steps to revolutionize charity through Web3
@@ -649,7 +649,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl font-bold mb-3">Smart Contracts</h3>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    Interact with StakerFun contracts and test functionality
+                    Interact with StakeGive contracts and test functionality
                   </p>
                 </div>
               </div>
@@ -749,7 +749,7 @@ export default function Home() {
                 href="/"
                 className="text-3xl font-black gradient-text mb-6 block"
               >
-                StakerFun
+                StakeGive
               </Link>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Revolutionizing charity through blockchain technology
@@ -803,7 +803,7 @@ export default function Home() {
 
           <div className="border-t border-white/10 pt-8 text-center">
             <p className="text-gray-600 dark:text-gray-400">
-              © 2025 StakerFun. Built for a decentralized future.
+              © 2025 StakeGive. Built for a decentralized future.
             </p>
           </div>
         </div>
