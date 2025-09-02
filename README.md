@@ -1,8 +1,5 @@
-# Charity-Frontend
-Charity Frontend
-
-## Steps
-Create .env.local and take Keys from .gitignore
+# StakeGive
+Stakegive
 
 # Build and Run
 
